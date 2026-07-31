@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  Monnai product/use-case pages (monnai.com) + live OAuth2 authorization-server
+  probes.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Live OAuth 2.0 authorization server at auth.monnai.com with /oauth2/authorize
+      and /oauth2/token endpoints (authorization-code and client-credentials flows).
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration exposed (404 from auth server).
+  - id: rfc8414-oauth-metadata
+    conforms: false
+    evidence: /.well-known/oauth-authorization-server returns 404.
+  - id: kyc-aml
+    conforms: true
+    evidence: >-
+      Onboarding/Risk use-case pages describe KYC/AML compliance workflows across
+      regions as a core capability (claim, not an independently verified certification).
+  - id: gdpr-privacy
+    conforms: true
+    evidence: >-
+      Product pages state a privacy-first approach with advanced encryption and
+      regulatory adherence across 190+ markets (self-asserted).
+notes: >-
+  These are cross-cutting standard assertions. No published third-party
+  certification program (SOC 2 / ISO 27001 / PCI DSS report) was found on a public
+  trust page, so no Compliance pointer is emitted.

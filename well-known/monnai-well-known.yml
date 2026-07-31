@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: Live probes of /.well-known/ discovery surface on Monnai hosts.
+hosts:
+  - host: https://monnai.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /security.txt
+        status: 301
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+  - host: https://auth.monnai.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+notes: >-
+  No .well-known discovery documents are published. The OAuth2 authorization
+  server (auth.monnai.com) returns a JSON 404 for OIDC/RFC-8414 discovery paths.
+  No security.txt, api-catalog, or ai-plugin.json found. Absence recorded as valid data.

@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  Live probes of Monnai OAuth2 authorization server (auth.monnai.com,
+  auth-dev.monnai.com) + endpoint constants harvested from the Monnai developer
+  console application (dev.monnai.com/bundle.js).
+summary:
+  types: [oauth2]
+  api_key_in: []
+  oauth2_flows: [authorizationCode, clientCredentials]
+schemes:
+  - name: MonnaiOAuth2
+    type: oauth2
+    description: >-
+      Monnai secures its Insights API with OAuth 2.0. Access tokens are issued by
+      Monnai's hosted authorization server (AWS-fronted, awselb/2.0 behind
+      CloudFront). Machine-to-machine integrations obtain a bearer token from the
+      token endpoint and present it on each API call; the console uses the
+      authorization-code flow for interactive sign-in.
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://auth.monnai.com/oauth2/authorize
+        tokenUrl: https://auth.monnai.com/oauth2/token
+        logoutUrl: https://auth.monnai.com/logout
+      - flow: clientCredentials
+        tokenUrl: https://auth.monnai.com/oauth2/token
+    environments:
+      production:
+        authorization: https://auth.monnai.com/oauth2/authorize
+        token: https://auth.monnai.com/oauth2/token
+      development:
+        authorization: https://auth-dev.monnai.com/oauth2/authorize
+        token: https://auth-dev.monnai.com/oauth2/token
+        logout: https://auth-dev.monnai.com/logout
+evidence:
+  - host: auth.monnai.com
+    observed: >-
+      GET / -> 200 (awselb/2.0 via CloudFront); POST /oauth2/token -> 405 on empty
+      body (real token endpoint, method/param-gated).
+  - host: auth-dev.monnai.com
+    observed: OAuth2 authorize/token/logout endpoints referenced by the developer console bundle.
+notes: >-
+  No public /.well-known/openid-configuration or /.well-known/oauth-authorization-server
+  document is exposed (both return 404 JSON from the authorization server). Scope
+  reference is not published on a public page, so no scopes/ artifact was derived.

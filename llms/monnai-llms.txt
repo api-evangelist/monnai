@@ -1,0 +1,36 @@
+# Monnai
+
+> Monnai is a global consumer-insights infrastructure company that delivers real-time, AI-ready data for decisioning across the customer lifecycle. Its Insights API unifies fragmented identity, device, and behavioral signals into clean, contextual profiles that power acquisition, onboarding, risk assessment, credit decisioning, and collections for financial institutions, fintechs, ecommerce, and marketplaces across 190+ countries.
+
+## Product
+- [Product Overview](https://www.monnai.com/product): Powering smarter decisions with AI-ready data — the Monnai Insights platform.
+- [Get Started / Request a Demo](https://www.monnai.com/get-started): Onboard to the Monnai Insights API.
+
+## Use cases
+- [Acquisition](https://www.monnai.com/use-case/acquisition)
+- [Onboarding](https://www.monnai.com/use-case/onboarding): Streamline KYC/AML verification and identity onboarding.
+- [Risk Assessment](https://www.monnai.com/use-case/risk-assessment): Fraud and risk signals from a proprietary data consortium.
+- [Credit Decisioning](https://www.monnai.com/use-case/credit-decisioning)
+- [Collections](https://www.monnai.com/use-case/collections)
+
+## Industries
+- [Financial Institutions](https://www.monnai.com/industry/financial-institutions)
+- [Fintech](https://www.monnai.com/industry/fintech)
+- [Ecommerce](https://www.monnai.com/industry/ecommerce)
+- [Marketplace](https://www.monnai.com/industry/marketplace)
+
+## Authentication
+- OAuth 2.0 (authorization-code and client-credentials flows).
+- Authorization endpoint: https://auth.monnai.com/oauth2/authorize
+- Token endpoint: https://auth.monnai.com/oauth2/token
+
+## Company
+- [About Us](https://www.monnai.com/about-us)
+- [Case Study: Flip](https://www.monnai.com/case-studies/flip)
+- [Case Study: Ninja Cart](https://www.monnai.com/case-studies/ninja-cart)
+- [Case Study: Drip Capital](https://www.monnai.com/case-studies/drip-capital)
+- [LinkedIn](https://www.linkedin.com/company/monnai/)
+
+## Notes
+- Backed by 500 Global.
+- No public OpenAPI, SDK registry package, MCP server, changelog, or status page was found; the developer console (dev.monnai.com) is authentication-gated.

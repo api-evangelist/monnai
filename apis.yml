@@ -1,25 +1,96 @@
 aid: monnai
 name: Monnai
-description: Monnai is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Monnai is a global consumer-insights infrastructure company that delivers
+  real-time, AI-ready data for decisioning across the entire customer lifecycle.
+  Its Insights API unifies fragmented identity, device, phone, email, and
+  behavioral signals from a proprietary data consortium into clean, contextual
+  360-degree profiles, enabling financial institutions, fintechs, ecommerce, and
+  marketplaces to power acquisition, onboarding (KYC/AML), risk assessment and
+  fraud detection, credit decisioning, and collections. Monnai provides localized
+  coverage across 190+ countries with a privacy-first, encryption-backed approach.
+  The API is secured with OAuth 2.0. Monnai is backed by 500 Global.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/675348f1c32d2b2d94ca4ff7/6779efb03e354eaf71050a44_apple-touch-icon%20(1).webp
 url: https://raw.githubusercontent.com/api-evangelist/monnai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-stub
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Consumer Insights
+- Fintech
+- Financial Services
+- Fraud Detection
+- Identity Verification
+- KYC
+- AML
+- Credit Decisioning
+- Risk Assessment
+- Collections
+- Emerging Markets
+- Decisioning
+- OAuth2
+apis:
+- name: Monnai Insights API
+  description: >-
+    Real-time consumer-insights and decisioning API. Accepts consumer identifiers
+    (phone, email, device, name, address) and returns enriched, AI-ready insights
+    used for onboarding/KYC-AML, fraud and risk assessment, credit decisioning,
+    acquisition, and collections across 190+ countries. Secured with OAuth 2.0.
+  humanURL: https://www.monnai.com/product
+  baseURL: https://dev.monnai.com/api
+  tags:
+  - Consumer Insights
+  - Risk
+  - Identity
+  - Decisioning
+  properties:
+  - type: Authentication
+    url: authentication/monnai-authentication.yml
+common:
+- type: Website
+  url: https://monnai.com
+- type: Portal
+  url: https://dev.monnai.com
+- type: SignUp
+  url: https://www.monnai.com/get-started
+- type: LinkedIn
+  url: https://www.linkedin.com/company/monnai/
+- type: Authentication
+  url: authentication/monnai-authentication.yml
+- type: DomainSecurity
+  url: security/monnai-domain-security.yml
+- type: Conformance
+  url: conformance/monnai-conformance.yml
+- type: WellKnown
+  url: well-known/monnai-well-known.yml
+- type: LLMsTxt
+  url: llms/monnai-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://monnai.com
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
