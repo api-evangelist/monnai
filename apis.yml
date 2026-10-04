@@ -48,8 +48,8 @@ tags:
 - Company
 - Consumer Insights
 - Fintech
-- Financial-Services
-- Fraud Detection
+- Financial Services
+- Fraud Prevention
 - Identity Verification
 - KYC
 - AML
@@ -74,6 +74,7 @@ tags_raw:
 - Emerging Markets
 - Decisioning
 - OAuth2
+- Financial-Services
 apis:
 - name: Monnai Insights API
   description: >-
@@ -84,6 +85,11 @@ apis:
   humanURL: https://www.monnai.com/product
   baseURL: https://dev.monnai.com/api
   tags:
+  - Consumer Insights
+  - Risk Management
+  - Identity
+  - Decisioning
+  tags_raw:
   - Consumer Insights
   - Risk
   - Identity
